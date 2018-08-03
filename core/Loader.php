@@ -9,7 +9,7 @@ GlobalApp::bind('config', require ('config/config.php'));
 print var_dump(GlobalApp::get('config'));
 GlobalAPP::bind('db', new QueryBuilder(Connection::getConnection(GlobalApp::get('config'))));
 
-print var_dump(GlobalApp::get('config'));exit;
+//print var_dump(GlobalApp::get('config'));exit;
 
 
 require ('../models/connection.php');
