@@ -7,7 +7,7 @@ namespace App\Core\Models\DataBase;
     public static function getConnection($config){
         try{
             
-            $conn = new PDO(
+            $conn = new \PDO(
                     $config['host'].";".
                     $config['dbname'],
                     $config['user'],

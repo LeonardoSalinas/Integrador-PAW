@@ -12,7 +12,7 @@ class MensajeCRUD extends QueryBuilder{
     }
     
      public function deleteMensaje($params){
-        return $this->select('mensaje', $id);
+        return $this->delete('mensaje', $params);
     }
     
     public function selectMensaje($params){

@@ -12,5 +12,5 @@
 
 	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum architecto, quam provident nemo beatae, sequi veniam assumenda tempore tenetur perspiciatis, dolorem fugit ipsa modi voluptatum eaque laudantium adipisci culpa saepe?</p>
 </footer>
-<script type="text/javascript" src="scripts/script.js"></script>
+<script type="text/javascript" src="/scripts/script.js"></script>
 </html>

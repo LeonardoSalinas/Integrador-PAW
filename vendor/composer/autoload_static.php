@@ -9,7 +9,8 @@ class ComposerStaticInitf4bb1cdf924bbfb73627318494c3ac8a
     public static $classMap = array (
         'App\\Core\\Exceptions\\RouteNotFoundException' => __DIR__ . '/../..' . '/core/RouteNotFoundException.php',
         'App\\Core\\GlobalApp' => __DIR__ . '/../..' . '/core/Global_app.php',
-        'App\\Core\\Models\\DataBase\\CasasCRUD' => __DIR__ . '/../..' . '/core/models/casas.php',
+        'App\\Core\\Helper' => __DIR__ . '/../..' . '/core/Helper.php',
+        'App\\Core\\Models\\DataBase\\CasaCRUD' => __DIR__ . '/../..' . '/core/models/casas.php',
         'App\\Core\\Models\\DataBase\\Connection' => __DIR__ . '/../..' . '/core/models/connection.php',
         'App\\Core\\Models\\DataBase\\ImagenCRUD' => __DIR__ . '/../..' . '/core/models/imagen.php',
         'App\\Core\\Models\\DataBase\\MensajeCRUD' => __DIR__ . '/../..' . '/core/models/mensaje.php',
@@ -17,15 +18,15 @@ class ComposerStaticInitf4bb1cdf924bbfb73627318494c3ac8a
         'App\\Core\\Models\\DataBase\\UsuarioCRUD' => __DIR__ . '/../..' . '/core/models/usuario.php',
         'App\\Core\\Request' => __DIR__ . '/../..' . '/core/Request.php',
         'App\\Core\\Router' => __DIR__ . '/../..' . '/core/Router.php',
-        'BaseController' => __DIR__ . '/../..' . '/application/controllers/Basecontroller.php',
+        'App\\Site\\Controllers\\BaseController' => __DIR__ . '/../..' . '/application/controllers/Basecontroller.php',
+        'App\\Site\\Controllers\\Casa' => __DIR__ . '/../..' . '/application/controllers/Casa.php',
+        'App\\Site\\Controllers\\Contact' => __DIR__ . '/../..' . '/application/controllers/Contact.php',
+        'App\\Site\\Controllers\\Home' => __DIR__ . '/../..' . '/application/controllers/Home.php',
+        'App\\Site\\Controllers\\Image' => __DIR__ . '/../..' . '/application/controllers/Image.php',
+        'App\\Site\\Controllers\\User' => __DIR__ . '/../..' . '/application/controllers/User.php',
         'ComposerAutoloaderInitf4bb1cdf924bbfb73627318494c3ac8a' => __DIR__ . '/..' . '/composer/autoload_real.php',
         'Composer\\Autoload\\ClassLoader' => __DIR__ . '/..' . '/composer/ClassLoader.php',
         'Composer\\Autoload\\ComposerStaticInitf4bb1cdf924bbfb73627318494c3ac8a' => __DIR__ . '/..' . '/composer/autoload_static.php',
-        'Contact' => __DIR__ . '/../..' . '/application/controllers/Contact.php',
-        'Home' => __DIR__ . '/../..' . '/application/controllers/Home.php',
-        'Home_create' => __DIR__ . '/../..' . '/application/controllers/home_create.php',
-        'Image_upload' => __DIR__ . '/../..' . '/application/controllers/image_upload.php',
-        'Users' => __DIR__ . '/../..' . '/application/controllers/user_create.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

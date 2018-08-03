@@ -12,7 +12,7 @@ class ImagenCRUD extends QueryBuilder{
     }
     
      public function deleteImagen($params){
-        return $this->select('imagen', $id);
+        return $this->delete('imagen', $params);
     }
     
     public function selectImagen($params){

@@ -1,5 +1,5 @@
 <?php
-require('loader.php');
+namespace App\Site\Controllers;
 
 class Home extends BaseController{
   
@@ -7,5 +7,3 @@ class Home extends BaseController{
         return $this->load_view('home');
     }
 }
-
-return (new Home())->index();

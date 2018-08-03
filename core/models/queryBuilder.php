@@ -5,7 +5,7 @@ namespace App\Core\Models\DataBase;
 class QueryBuilder {    
     protected $conn;
     
-    public function __construct($pdo) {
+    public function __construct(\PDO $pdo) {
         $this->conn = $pdo;
     }
     
@@ -21,10 +21,12 @@ class QueryBuilder {
         $values = substr($values, 0, -2);
 
         $sql .= "(". $fields . ") VALUES (" . $values . ")";
+        
         try{
             $stmt = $this->conn->prepare($sql);
-            foreach($params as $field => $value){
+            foreach($params as $field => &$value){
                 $stmt->bindParam(':'. $field, $value);
+                //print 'bindParam(:'. $field . ', '. $value.')<br>';
             }
             $stmt->execute();
             return $this->conn->lastInsertId();
@@ -39,11 +41,11 @@ class QueryBuilder {
             $sql .= $field . " = :" . $field . ", ";       
         }
         $sql = substr($sql, 0, -2);
-        $sql .= " WHERE " . $id['field'] . " = " . $id['field'];
+        $sql .= " WHERE " . $id['field'] . " = :" . $id['field'];
         try{
             $stmt = $this->conn->prepare($sql);
             $stmt->bindParam(':' . $id['field'], $id['value']);
-            foreach($params as $field => $value){
+            foreach($params as $field => &$value){
                 $stmt->bindParam(':'. $field, $value);
             }
             $stmt->execute();
@@ -55,8 +57,9 @@ class QueryBuilder {
     
     protected function delete($table, $id){
         $sql = "UPDATE " . $table . " SET deleted_at = :deleted_at";
-        $sql .= " WHERE " . $id['field'] . " = " . $id['field'];
-        $deleted_at = new DateTime();
+        $sql .= " WHERE " . $id['field'] . " = :" . $id['field'];
+        $date = new \DateTime();
+        $deleted_at = $date->format('Y-m-d H:i:s');
         try{
             $stmt = $this->conn->prepare($sql);
             $stmt->bindParam(':' . $id['field'], $id['value']);
@@ -69,23 +72,23 @@ class QueryBuilder {
     }
     
     protected function select($table, $params = NULL){
-        $sql = "SELECT * from " . $table;
+        $sql = "SELECT * from " . $table . " WHERE ";;
         if(!$params == NULL){
-            $sql .= " WHERE ";
             foreach($params as $field => $value){
                 $sql .= $field . " = :" . $field . " AND ";
             }
-            $sql = substr($sql, 0, -5);
+            //$sql = substr($sql, 0, -5);            
         }
+        $sql .= 'deleted_at IS NULL';
         try{
             $stmt = $this->conn->prepare($sql);
             if(!$params == NULL){
-                foreach($params as $field => $value){
+                foreach($params as $field => &$value){
                     $stmt->bindParam(':'. $field, $value);
                 }
             }
             $stmt->execute();
-            return $stmt->fetchAll(PDO::FETCH_OBJ);
+            return $stmt->fetchAll();
         } catch (PDOException $e) {
             return $sql . "<br>" . $e->getMessage();
         }

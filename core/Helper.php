@@ -1,10 +1,13 @@
 <?php
+namespace App\Core;
 
-function view($name, $data = []){
-    extract($data);
-    return require "application/views/{$name}.view.php";
-}
+class Helper{
+    public static function view($name, $data = []){
+        extract($data);
+        return require "application/views/{$name}.php";
+    }
 
-function redirect($path){
-    header("Location: /{$path}");
+    public static function redirect($path){
+        header("Location: /{$path}");
+    }
 }

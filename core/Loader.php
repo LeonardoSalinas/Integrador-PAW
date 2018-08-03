@@ -3,18 +3,12 @@
 namespace App\Core;
 
 use App\Core\GlobalApp;
-use App\Core\Models\DataBase\{QueryBuilder, Connection};
+use App\Core\Models\DataBase\Connection;
 
 GlobalApp::bind('config', require ('config/config.php'));
-print var_dump(GlobalApp::get('config'));
-GlobalAPP::bind('db', new QueryBuilder(Connection::getConnection(GlobalApp::get('config'))));
-
-print var_dump(GlobalApp::get('config'));exit;
+GlobalApp::bind('db_pdo', Connection::getConnection(GlobalApp::get('config')));
 
 
-require ('../models/connection.php');
-require ('../models/queryBuilder.php');
-require_once ('../controllers/Basecontroller.php');
 
 /*require ('core/Router.php');
 

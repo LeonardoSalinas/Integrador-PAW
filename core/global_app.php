@@ -3,7 +3,7 @@ namespace App\Core;
 
 class GlobalApp
 {
-    protected static $registry = [];
+    public static $registry = [];
 
     public static function bind($key, $value)
     {

@@ -409,9 +409,7 @@ footer ul li a:hover {
 	cursor: pointer;
 }
 
-.buscarAlquilar-button:hover, .buscarVender-button:hover, .itemAlquiler > button:hover, .fotoItemAlquiler button:hover , .itemVenta > button:hover, .fotoItemVenta button:hover{
-	background-color: var(--colorOscuro);
-}
+
 
 
 /*------------------------------ alquileres/ventas: sección de los items ------------------------------*/
@@ -429,7 +427,7 @@ footer ul li a:hover {
 	margin: 1em 0;
 }
 
-.itemAlquiler a button, .itemVenta a button {
+.itemAlquiler > a > button, .itemVenta > a > button {
 	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
@@ -445,6 +443,10 @@ footer ul li a:hover {
 
 }
 
+.itemAlquiler > a > button:hover {
+	background-color: var(--colorOscuro);
+}
+
 .fotoItemAlquiler, .fotoItemVenta {
 	position: relative;
 	display: inline-block;
@@ -457,28 +459,7 @@ footer ul li a:hover {
 
 .fotoItemAlquiler img, .fotoItemVenta img {
 	width: 100%;
-}
-
-.fotoItemAlquiler p, .fotoItemVenta p {
-	position: absolute;
-	top: 0;
-	right: 0;
-	padding: .2em;
-	background-color: var(--colorClaro);
-	color: #fff;
-}
-
-.fotoItemAlquiler button, .fotoItemVenta button {
-	position: absolute;
-	bottom: 0;
-	right: 0;
-	margin: .4em;
-	border: 1px solid #0015ff;
-	color: #fff;
-	background-color: var(--colorClaro);
-	font-size: 1em;
-	padding: .2em .4em;
-	cursor: pointer;
+	animation: blurAnimation .3s;
 }
 
 .descItemAlquiler, .descItemVenta {
@@ -529,6 +510,17 @@ footer ul li a:hover {
 .detallesSlider {
 	/*position: relative;*/
 	margin-bottom: 2.5em;
+}
+
+.descInfoPropiedad ul li a button {
+    position: relative;
+    top: 1em;
+    padding: 1em;
+    border: 2px solid var(--colorOscuro);
+    background-color: var(--colorClaro);
+    color: white;
+    cursor: pointer;
+    list-style: none;
 }
 
 .detallesSliderContenedor{
@@ -699,7 +691,7 @@ footer ul li a:hover {
 }
 
 
-/*------------------------------ contacto: formulario de contacto ------------------------------*/
+/*------------------------------ Información de contacto ------------------------------*/
 
 
 .h2-tituloInfoContacto {
@@ -734,20 +726,20 @@ footer ul li a:hover {
 }
 
 
-/*------------------------------ buscarAvanzado: formulario ------------------------------*/
+/*------------------------------ buscarAvanzado: formulario & Login Usuario ------------------------------*/
 
 
-.h2-buscarAvanzado {
+.h2-buscarAvanzado, .h2-login {
 	padding: 1em;
 	color: var(--colorClaro);
 	text-align: center;
 }
 
-.buscarAvanzadoContenedor {
+.buscarAvanzadoContenedor, .loginContenedor {
 	margin-bottom: 10em;
 }
 
-.buscarAvanzadoContenedor form {
+.buscarAvanzadoContenedor form, .loginContenedor form {
 	position: relative;
 	left: 50%;
 	transform: translateX(-50%);
@@ -760,7 +752,7 @@ footer ul li a:hover {
 	color: #0061ff;
 }
 
-.buscarAvanzadoContenedor form input {
+.buscarAvanzadoContenedor form input, .loginContenedor form input {
     padding: 3px 5px;
     margin: 8px 0;
     display: inline-block;
@@ -769,11 +761,11 @@ footer ul li a:hover {
     box-sizing: border-box;
 }
 
-.buscarAvanzadoContenedor form input[type="text"], .buscarAvanzadoContenedor form input[name="tipo"], .buscarAvanzadoContenedor form input[name="transaccion"], .buscarAvanzadoContenedor form input[name="ubicacion"], .buscarAvanzadoContenedor form input[name="estado"] {
+.buscarAvanzadoContenedor form input[type="text"], .buscarAvanzadoContenedor form input[name="tipo"], .buscarAvanzadoContenedor form input[name="transaccion"], .buscarAvanzadoContenedor form input[name="ubicacion"], .buscarAvanzadoContenedor form input[name="estado"], .buscarAvanzadoContenedor form input[type="number"] {
 	width: 100%;
 }
 
-.buscarAvanzadoContenedor form input[type="number"] {
+.loginContenedor form input[type="text"], .loginContenedor form input[type="password"] {
 	width: 100%;
 }
 
@@ -800,7 +792,7 @@ footer ul li a:hover {
 	background-color: var(--colorOscuro);
 }
 
-.buscarAvanzadoContenedor form input[type="submit"] {
+.buscarAvanzadoContenedor form input[type="submit"], .loginContenedor form input[type="submit"] {
     width: 30%;
     background-color: var(--colorClaro);
     color: white;
@@ -811,7 +803,7 @@ footer ul li a:hover {
     cursor: pointer;
 }
 
-.buscarAvanzadoContenedor form input[type="submit"]:hover {
+.buscarAvanzadoContenedor form input[type="submit"]:hover, .loginContenedor form input[type="submit"]:hover {
 	background-color: var(--colorOscuro);
 }
 
@@ -839,17 +831,126 @@ footer ul li a:hover {
 }
 
 
-/*------------------------------ getCasas ------------------------------*/
+/*------------------------------ mensajes ------------------------------*/
 
 
-.casasList, .usersList {
-	margin: 5em 0;
-	
-}
-
-.casasList ul li, .usersList ul li {
-	border: 2px solid var(--colorClaro);
+.h2-mensajes {
+	padding: 1em;
+	color: var(--colorClaro);
 	text-align: center;
-	margin: .5em 0;
-	background-color: #fff;
 }
+
+.mensajesContenedor {
+	margin-bottom: 10em;
+}
+
+.mensajesContenedor div {
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 35%;
+	height: auto;
+	border: solid 2px var(--colorClaro);
+	border-radius: 10px;
+	padding: 1em;
+	margin: .5em 0;
+	background-color: #babdff;
+	color: #0061ff;
+}
+
+.mensajesContenedor div button {
+	position: absolute;
+	top: .5em;
+	right: .5em;
+	padding: .1em;
+	border: 2px solid var(--colorOscuro);
+	background-color: var(--colorClaro);
+}
+
+.mensajesContenedor div button:hover {
+	transition: .5s;
+	background-color: var(--colorOscuro);
+	padding: .4em;
+}
+
+.mensajesContenedor div ul {
+	list-style: none;
+}
+
+.mensajesContenedor div ul li{
+	font-weight: bold;
+	margin: .2em 0;
+}
+
+.mensajesContenedor article {
+	background: #fff;
+	margin-top: 1em;
+	padding: .5em;
+	border-radius: .5em;
+}
+
+
+/*------------------------------ lista de usuarios ------------------------------*/
+
+.h2-usersList {
+        padding: 1em;
+        color: var(--colorClaro);
+        text-align: center;
+}
+        
+.usersList {
+        margin-bottom: 10em;
+}
+
+.usersList table {
+    	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 70%;
+	height: auto;
+	border: solid 2px var(--colorClaro);
+	border-radius: 10px;
+	padding: 1em;
+	margin: .5em 0;
+	background-color: #babdff;
+	color: #0061ff;
+}
+
+.usersListTitles td{
+    font-weight: bold;
+}
+
+.usersList tr {
+
+}
+
+.usersList p {
+    display: inline-block;
+}
+
+.usersList button {
+    padding: .4em;
+    border: 2px solid var(--colorOscuro);
+    background-color: var(--colorClaro);
+    color: white;
+    cursor: pointer;
+}
+
+.usersList button:hover {
+    background-color: var(--colorOscuro);
+}
+
+.usersList > a > button {
+    position: relative;
+    bottom: -3em;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10%;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+

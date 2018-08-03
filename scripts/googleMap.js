@@ -1,7 +1,7 @@
 // Funciones para Google Maps
 function myMap() {
-  
-  var myCenter = new google.maps.LatLng(-34.652746, -59.426028);
+  var coord = document.getElementById('coord').innerHTML;
+  var myCenter = new google.maps.LatLng(coord);
   var mapCanvas = document.getElementById("googleMap");
   var mapOptions = {center: myCenter, zoom: 15};
   var map = new google.maps.Map(mapCanvas, mapOptions);

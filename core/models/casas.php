@@ -1,7 +1,7 @@
 <?php
 namespace App\Core\Models\DataBase;
 
-class CasasCRUD extends QueryBuilder {
+class CasaCRUD extends QueryBuilder {
 
     public function insertCasa($params){
         return $this->insert('casa', $params);
@@ -12,10 +12,11 @@ class CasasCRUD extends QueryBuilder {
     }
     
      public function deleteCasa($params){
-        return $this->select('casa', $id);
+        return $this->delete('casa', $params);
     }
     
     public function selectCasa($params){
+        
         return $this->select('casa',    $params);
     }
 }

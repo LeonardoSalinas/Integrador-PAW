@@ -12,10 +12,10 @@ class UsuarioCRUD extends QueryBuilder{
     }
     
      public function deleteUsuario($params){
-        return $this->select('usuario', $id);
+        return $this->delete('usuario', $params);
     }
     
-    public function selectUsuario($params){
+    public function selectUsuario($params = NULL){
         return $this->select('usuario', $params);
     }
 }
