@@ -5,7 +5,7 @@ namespace App\Core\Models\DataBase;
 class QueryBuilder {    
     protected $conn;
     
-    public function __construct(PDO $pdo) {
+    public function __construct($pdo) {
         $this->conn = $pdo;
     }
     

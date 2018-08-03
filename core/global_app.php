@@ -7,11 +7,11 @@ class GlobalApp
 
     public static function bind($key, $value)
     {
-        $this->registry[$key] = $value;
+        static::$registry[$key] = $value;
     }
 
     public static function get($key)
     {
-        return $this->registry[$key];
+        return static::$registry[$key];
     }
 }
