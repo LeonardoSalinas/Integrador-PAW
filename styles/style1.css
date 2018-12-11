@@ -6,16 +6,38 @@
 	--colorOscuro: #013c9b;
 }
 
-/*.lineSeparator {
-	height: 1px;
-	background: var(--colorClaro);
-	border-bottom: 1px solid var(--colorClaro);
-	clear: both;
-}*/
-
 * {
 	margin: 0;
 	padding: 0;
+}
+
+.button01 { /* Botones azules normales */
+	background-color: var(--colorClaro);
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 0.5em;
+	padding: .3em .5em;
+}
+
+.button01:hover {
+	background-color: var(--colorOscuro);
+}
+
+.button02 { /* Botones grises/cancelar/limpiar */
+	background-color: #9b9b9b;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 0.5em;
+}
+
+.button02:hover {
+	background-color: #898989;
 }
 
 textarea {
@@ -38,15 +60,11 @@ body {
     box-shadow: 2px 2px 7px rgba(0,0,0,.6);
     border-radius: 50%;
     outline: none;
-    background-color: var(--colorClaro);
-    color: white;
-    cursor: pointer;
     padding: .6em .9em;
     font-size: 1.2em;
 }
 
 .goToTop:hover {
-	background-color: var(--colorOscuro);  	
 	transform-origin: 50% 50%;
   	animation: jumpAnimation .5s;
 }
@@ -116,10 +134,6 @@ nav {
 
 .navBar>ul {
 	list-style: none;
-}
-
-.navBar>ul>li>button {
-
 }
 
 .navBar li a {
@@ -240,17 +254,10 @@ footer ul li a:hover {
 }
 
 .mainMenu button {
-    background-color: var(--colorClaro);
-    border: none;
-    color: white;
     padding: .8em 1.3em;
-    text-align: center;
-    text-decoration: none;
     display: inline-block;
     font-size: 1em;
     margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 0.5em;
     position: absolute;
     transition: .5s;
 }
@@ -365,16 +372,12 @@ footer ul li a:hover {
 }
 
 .botonSliderIzq, .botonSliderDer {
-	border: none;
-	color: #fff;
-	background-color: var(--colorClaro);
 	font-size: 2em;
 	padding: .5em;
 	transition: .2s;
 }
 
 .botonSliderIzq:hover, .botonSliderDer:hover {
-	background-color: var(--colorOscuro);
 	padding: .8em;
 }
 
@@ -432,19 +435,10 @@ footer ul li a:hover {
 	top: 50%;
 	transform: translateY(-50%);
 	right: 0;
-	border: none;
-	color: #fff;
-	background-color: var(--colorClaro);
 	font-size: 1em;
 	padding: .3em .5em;
 	margin-right: 1em;
 	border-radius: .4em;
-	cursor: pointer;
-
-}
-
-.itemAlquiler > a > button:hover {
-	background-color: var(--colorOscuro);
 }
 
 .fotoItemAlquiler, .fotoItemVenta {
@@ -516,10 +510,6 @@ footer ul li a:hover {
     position: relative;
     top: 1em;
     padding: 1em;
-    border: 2px solid var(--colorOscuro);
-    background-color: var(--colorClaro);
-    color: white;
-    cursor: pointer;
     list-style: none;
 }
 
@@ -662,33 +652,16 @@ footer ul li a:hover {
 
 .formContactoContenedor form input[type="submit"] {
     width: 25%;
-    background-color: var(--colorClaro);
-    color: white;
     padding: 14px 20px;
     margin: 8px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.formContactoContenedor form input[type="submit"]:hover {
-	background-color: var(--colorOscuro);
 }
 
 .formContactoContenedor form input[type="reset"] {
     width: 25%;
-    background-color: #9b9b9b;
-    color: white;
     padding: 14px 20px;
     margin: 8px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
 }
 
-.formContactoContenedor form input[type="reset"]:hover {
-	background-color: #898989;
-}
 
 
 /*------------------------------ Información de contacto ------------------------------*/
@@ -771,55 +744,26 @@ footer ul li a:hover {
 
 .buscarAvanzadoContenedor form input[type="button"] {
     width: 30%;
-    background-color: var(--colorClaro);
-    color: white;
     padding: 14px 20px;
     margin: 8px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
 }
 
-.buscarAvanzadoContenedor form input[type="radio"] {
-	/*width: 5%;*/
-}
 
 .buscarAvanzadoContenedor form label[for="patio"] {
 	margin-right: .8em;
 }
 
-.buscarAvanzadoContenedor form input[type="button"]:hover {
-	background-color: var(--colorOscuro);
-}
-
 .buscarAvanzadoContenedor form input[type="submit"], .loginContenedor form input[type="submit"] {
     width: 30%;
-    background-color: var(--colorClaro);
-    color: white;
     padding: 14px 20px;
     margin: 8px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
 }
 
-.buscarAvanzadoContenedor form input[type="submit"]:hover, .loginContenedor form input[type="submit"]:hover {
-	background-color: var(--colorOscuro);
-}
 
 .buscarAvanzadoContenedor form input[type="reset"] {
     width: 30%;
-    background-color: #9b9b9b;
-    color: white;
     padding: 14px 20px;
     margin: 8px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.buscarAvanzadoContenedor form input[type="reset"]:hover {
-	background-color: #898989;
 }
 
 .buscarAvanzadoContenedor form p {
@@ -864,7 +808,6 @@ footer ul li a:hover {
 	right: .5em;
 	padding: .1em;
 	border: 2px solid var(--colorOscuro);
-	background-color: var(--colorClaro);
 }
 
 .mensajesContenedor div button:hover {
@@ -930,10 +873,6 @@ footer ul li a:hover {
 
 .usersList button {
     padding: .4em;
-    border: 2px solid var(--colorOscuro);
-    background-color: var(--colorClaro);
-    color: white;
-    cursor: pointer;
 }
 
 .usersList button:hover {
