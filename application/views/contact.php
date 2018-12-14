@@ -7,8 +7,8 @@
                 <input type="email" name="email" placeholder="suMail@ejemplo.com.ar">
                 <input type="tel" name="telefono" placeholder="Ingrese su teléfono...">
                 <textarea name="mensaje" rows="5" placeholder="Mensaje..." form="formContacto"></textarea>
-                <input type="submit" name="submit" value="Enviar">
-                <input type="reset" value="Limpiar">
+                <input type="submit" class="button01" name="submit" value="Enviar">
+                <input type="reset" class="button02" value="Limpiar">
         </form>
 </section>
 
