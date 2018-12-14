@@ -71,8 +71,8 @@
 
                 <input type="text" id="coordenadas" name="coordenadas" placeholder="Coordenadas..." maxlength="100" onblur="validarCasa('coordenadas', this.value)">
 
-                <input type="submit" id="submitbtn" name="submitbtn" value="Cargar">
-                <input type="reset" value="Limpiar">
+                <input type="submit" class="button01" id="submitbtn" name="submitbtn" value="Cargar">
+                <input type="reset" class="button02" value="Limpiar">
 
         </form>
     </section>
