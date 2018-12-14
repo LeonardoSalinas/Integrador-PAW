@@ -27,7 +27,7 @@
                                 <li>Precio: <?=$mi_casa['precio']?></li>
                                 <li style="display:none" id='coord'><?=$mi_casa['coordenadas']?></li>
                                 
-                                <li><a href="/index/image/create.php?id_casa=<?=$mi_casa['id_casa']?>"> <button>Subir Imagen</button></a></li>
+                                <li><a href="/index/image/create.php?id_casa=<?=$mi_casa['id_casa']?>"> <button class="button01">Subir Imagen</button></a></li>
 			</ul>
 		</div>
 
