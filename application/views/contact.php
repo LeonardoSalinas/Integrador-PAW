@@ -2,7 +2,7 @@
 <h2 class="h2-contacto">Deje sus datos y responderemos a la brevedad.</h2>
 
 <section class="formContactoContenedor">
-        <form action="/index/message/create.php"" method = "post" id="formContacto">
+        <form class="formCenter" action="/index/message/create.php"" method = "post" id="formContacto">
                 <input type="text" name="nombre" placeholder="Ingrese su nombre...">
                 <input type="email" name="email" placeholder="suMail@ejemplo.com.ar">
                 <input type="tel" name="telefono" placeholder="Ingrese su teléfono...">
