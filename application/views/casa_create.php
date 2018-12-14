@@ -5,7 +5,7 @@
 <section class="buscarAvanzadoContenedor">
 
 
-    <form action="/index/casa/create.php?<?php echo trim($users["field"]).'='.trim($users['value'])?>" method ="post" id="miform">
+    <form class="formCenter" action="/index/casa/create.php?<?php echo trim($users["field"]).'='.trim($users['value'])?>" method ="post" id="miform">
 
 
                 <input type="text" id="direccion" name="direccion" placeholder="Direccion..." maxlength="100" onblur="validarCasa('direccion', this.value)">
