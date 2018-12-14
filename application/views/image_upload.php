@@ -3,7 +3,7 @@
 
 <section class="buscarAvanzadoContenedor">
 
-                <form action="/index/image/upload.php?id_casa="<?= $_GET['id_casa']?> method ="post" enctype="multipart/form-data">
+                <form class="formCenter" action="/index/image/upload.php?id_casa="<?= $_GET['id_casa']?> method ="post" enctype="multipart/form-data">
 
                 <input type="text" id="descripcion" name="descripcion" placeholder="Descripcion..." maxlength="128">
                 <input type="file" accept="image/jpeg, image/png, image/bmp" name="upload"><br>
