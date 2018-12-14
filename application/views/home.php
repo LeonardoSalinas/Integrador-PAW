@@ -3,14 +3,14 @@
 		<a href="alquileres.php">
 			<figure class="alquileres">
 				<img class="alqImg" src="/images/casa02.jpg" alt="Casa decorativa para alquilar">
-				<button type="button" class="alqButton">Alquileres</button>
+				<button type="button" class="alqButton button01">Alquileres</button>
 			</figure>
 		</a>
 
 		<a href="ventas.php">
 			<figure class="compras">
 				<img class="compImg" src="/images/casa03.jpg" alt="Casa decorativa para comprar">
-				<button type="button" class="compButton">Ventas</button>
+				<button type="button" class="compButton button01">Ventas</button>
 			</figure>	
 		</a>
 	</section>
