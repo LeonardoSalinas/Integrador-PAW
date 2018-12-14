@@ -4,7 +4,7 @@
 <section class="buscarAvanzadoContenedor">
 
 
-    <form action=\"../controller/altaCasa.php?id_usuario=" <?php $id ?> method =\"post\" id="miform">"
+    <form class="formCenter" action=\"../controller/altaCasa.php?id_usuario=" <?php $id ?> method =\"post\" id="miform">"
 
 
                 <input type="text" id="direccion" name="direccion" placeholder="Direccion..." maxlength="100" onblur="validarCasa('direccion', this.value)">
