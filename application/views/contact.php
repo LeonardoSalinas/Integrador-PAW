@@ -11,5 +11,3 @@
                 <input type="reset" class="button02" value="Limpiar">
         </form>
 </section>
-
-print 'aca voy';
