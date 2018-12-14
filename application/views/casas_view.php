@@ -18,7 +18,7 @@
                     <li>Patio: <?= $fila['patio']?></li>
                 </ul>
             </article>
-            <a href="/index/casa/detail.php?id_casa=<?php echo $fila['id_casa']?>"><button>Más detalles &#10095;</button></a>
+            <a href="/index/casa/detail.php?id_casa=<?php echo $fila['id_casa']?>"><button class="button01">Más detalles &#10095;</button></a>
 	</div>
     <?php $n +=1;} ?>
 </section>
