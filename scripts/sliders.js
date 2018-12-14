@@ -11,9 +11,9 @@ if (document.getElementsByClassName("mySlide").length > 0){
       elemButtonRight.appendChild(contentButtonRight);
 
       //Seteo los atributos de los botones
-      elemButtonLeft.setAttribute("class", "botonSliderIzq");
+      elemButtonLeft.setAttribute("class", "botonSliderIzq button01");
       elemButtonLeft.setAttribute("id", "botonSliderIzq");
-      elemButtonRight.setAttribute("class", "botonSliderDer");
+      elemButtonRight.setAttribute("class", "botonSliderDer button01");
       elemButtonRight.setAttribute("id", "botonSliderDer");
 
       //Inserto los botones en el documento
