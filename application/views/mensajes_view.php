@@ -3,7 +3,7 @@
         <div>         
            <?php $messages = $data['messages'];        
              foreach($messages as $fila){ ?>
-                <a href="/index/message/delete.php?id_mensaje=<?php echo trim($fila["id_mensaje"]);?>"> <button>Eliminar</button></a>
+                <a href="/index/message/delete.php?id_mensaje=<?php echo trim($fila["id_mensaje"]);?>"> <button class="button01">Eliminar</button></a>
                     <ul>
                         <li><p>Nombre: <?php echo trim($fila["nombre"]);?></p></li>
                         <li><p>Email: <?php echo trim($fila["email"]);?></p></li>
