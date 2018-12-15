@@ -7,7 +7,7 @@
 
                 <input type="text" id="descripcion" name="descripcion" placeholder="Descripcion..." maxlength="128">
                 <input type="file" accept="image/jpeg, image/png, image/bmp" name="upload"><br>
-                <input type="submit" name="submit" value="Subir">
-                <input type="reset" value="Limpiar">
+                <input type="submit" class="button01" name="submit" value="Subir">
+                <input type="reset" class="button02" value="Limpiar">
         </form>
 </section>
