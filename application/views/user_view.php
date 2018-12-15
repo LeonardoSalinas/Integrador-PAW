@@ -23,11 +23,11 @@
                     <td><p><?= trim($fila["dni"])?></p></td>
                     <td><p><?= trim($fila["telefono"])?></p></td>
                     <td><p><?= trim($fila["email"])?></p></td>
-                    <td><p><a href="/index/casa/create.php?id_usuario=<?php echo trim($fila["id_usuario"])?>"> <button>Agregar Casa</button></a></p></td>
+                    <td><p><a href="/index/casa/create.php?id_usuario=<?php echo trim($fila["id_usuario"])?>"> <button class="button01">Agregar Casa</button></a></p></td>
                     <!--<td><p><a href="/index/home.php?=<?php echo trim($fila["id_usuario"])?>"> <button>Editar</button></a></p></td>-->
-                    <td><p><a href="/index/user/delete.php?id_usuario=<?php echo trim($fila["id_usuario"])?>"> <button>Eliminar</button></a></p></td>
+                    <td><p><a href="/index/user/delete.php?id_usuario=<?php echo trim($fila["id_usuario"])?>"> <button class="button01">Eliminar</button></a></p></td>
                 </tr>
 	<?php }?>
     </table>
-    <a href="/index/user/create.php"><button>Nuevo Usuario</button></a>
+    <a href="/index/user/create.php"><button class="button01">Nuevo Usuario</button></a>
 </section>
