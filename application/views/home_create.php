@@ -73,8 +73,8 @@
                 <p id="rspcoordenadas">OK</p> <br>
 
 
-                <input type="button" id="submitbtn" name="submitbtn" value="Cargar" onclick="checkFormAltaCasa()">
-                <input type="reset" value="Limpiar">
+                <input type="button" id="submitbtn" class="button01" name="submitbtn" value="Cargar" onclick="checkFormAltaCasa()">
+                <input type="reset" class="button02" value="Limpiar">
                 <p id="rspsubmit"></p>
         </form>
     </section>
