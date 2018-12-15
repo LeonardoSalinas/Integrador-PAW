@@ -7,8 +7,8 @@
                 <input type="text" id="dni" name="dni" placeholder="DNI..." maxlength="128" onblur="validarUsuario('dni', this.value)">
                 <input type="Tel" id="telefono" name="telefono" placeholder="Teléfono..." maxlength="128" onblur="validarUsuario('telefono', this.value)">
                 <input type="email" id="email" name="email" placeholder="suMail@ejemplo.com.ar" maxlength="128" onblur="validarUsuario('email', this.value)"><br>
-                <input type="submit"  name="submitbtn" value="Cargar">
-                <input type="reset" value="Limpiar">
+                <input type="submit" class="button01" name="submitbtn" value="Cargar">
+                <input type="reset" class="button02" value="Limpiar">
         </form>
 </section>  
 
