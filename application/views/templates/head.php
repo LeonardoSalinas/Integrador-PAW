@@ -6,7 +6,7 @@
 	<title>Inmobiliaria Mercedes</title>
 	<link rel="stylesheet" id="styleLink" href="/styles/style1.css">
 </head>
-<button class="goToTop" id="goToTop">&#8679;</button>
+<button class="goToTop button01" id="goToTop">&#8679;</button>
 <header>
 	<a href="index.php">
 		<img class="logo" id="logo" src="/images/logo_inmomer.png" alt="Logo de Inmobiliaria Mercedes">
